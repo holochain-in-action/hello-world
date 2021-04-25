@@ -1,4 +1,4 @@
-### Follow this steps to run Hello Word
+### Follow this steps to run Hello World
 
 0. Install nix-shell (https://developer.holochain.org/docs/install/)
 1. Clone this repository
