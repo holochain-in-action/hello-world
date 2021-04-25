@@ -15,12 +15,12 @@ pub struct InputArgumentDTO {
 // It is recommended to send back the zome function result via a serializable struct
 #[derive(Clone, Serialize, Deserialize, Debug, SerializedBytes)]
 #[serde(rename_all = "camelCase")]
-pub struct HelloWordResultDTO {
+pub struct HelloWorldResultDTO {
     pub data: String,
 }
 #[hdk_extern]
-pub fn hello_word(input: InputArgumentDTO) -> ExternResult<HelloWordResultDTO> {
-    let result = HelloWordResultDTO {
+pub fn hello_world(input: InputArgumentDTO) -> ExternResult<HelloWorldResultDTO> {
+    let result = HelloWorldResultDTO {
         data: input.content,
     };
     Ok(result)

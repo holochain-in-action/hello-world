@@ -7,13 +7,13 @@ module.exports = async (orchestrator) => {
   orchestrator.registerScenario("Who am I", async (s, t) => {
     const alice_cell = await InstallAgentApp(s, "alice-cell");
 
-    let hello_word_result = await alice_cell.call("peershare", "hello_word", {
+    let hello_world_result = await alice_cell.call("peershare", "hello_world", {
       content: "Hello to Holochain",
     });
 
-    _log("Hellow Word Result", hello_word_result);
+    _log("Hello World Result", hello_world_result);
 
-    t.deepEqual(hello_word_result.data, "Hello to Holochain");
+    t.deepEqual(hello_world_result.data, "Hello to Holochain");
 
     await sleep(10);
   });
