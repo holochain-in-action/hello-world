@@ -5,5 +5,5 @@ require("./who_am_i")(orchestrator);
 orchestrator.run();
 
 orchestrator = new Orchestrator();
-require("./hello_word")(orchestrator);
+require("./hello_world")(orchestrator);
 orchestrator.run();
